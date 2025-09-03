@@ -110,7 +110,8 @@ class MovieViewSet(
     @action(
         methods=["POST"],
         detail=True,
-        url_path="upload-image",
+        url_path="uploads-image",
+        url_name="uploads-image",
         permission_classes=[IsAdminOrIfAuthenticatedReadOnly]
     )
     def upload_image(self, request, pk=None):
